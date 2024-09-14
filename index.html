@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Music Video</title>
+    <style>
+        /* Custom CSS for page styling */
+        body {
+            background-color: #f0f8ff; /* Light background color */
+            font-family: Arial, sans-serif; /* Font styling */
+            text-align: center; /* Centering content */
+        }
+
+        h1 {
+            color: #333; /* Dark text color */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        /* For animation */
+        #animatedText {
+            position: relative;
+            font-size: 2em;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header for the webpage -->
+    <h1>Welcome to My Favorite Music Video Page</h1>
+
+    <!-- Embedded YouTube Video -->
+    <p>Check out my favorite music video below!</p>
+    <iframe width="560" height="315" src="https://youtu.be/h_D3VFfhvs4?si=iwLM4GsTrPKfyXUp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <!-- JavaScript Animation -->
+    <h2 id="animatedText">Enjoy the Music!</h2>
+
+    <script>
+        // JavaScript to create a simple animation for text
+        let text = document.getElementById("animatedText");
+        text.style.position = "relative";  // Make it moveable
+        let pos = 0;
+
+        function move() {
+            if (pos >= 350) {
+                pos = 0;  // Reset the position
+            } else {
+                pos++;
+                text.style.left = pos + "px";  // Move the text horizontally
+            }
+        }
+
+        // Call the move function every 10 milliseconds
+        setInterval(move, 10);
+    </script>
+</body>
+</html>
